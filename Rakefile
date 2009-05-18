@@ -1,23 +1,13 @@
-require 'rubygems'
-require 'rake/gempackagetask'
-require 'rake/testtask'
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "rubysspi-server"
+    gemspec.summary = "A library which implements Ruby server bindings to the Win32 SSPI library."
+    gemspec.author = "Alexey Borzenkov"
+    gemspec.email = "snaury@gmail.com"
 
-spec = Gem::Specification.new do |s|
-  s.platform = Gem::Platform::RUBY
-  s.name = "rubysspi-server"
-  s.version = "0.0.1"
-  s.summary = "A library which implements Ruby server bindings to the Win32 SSPI library."
-
-  s.add_dependency('rubysspi', '>= 1.3.1')
-  s.files = FileList["lib/**/*", "*.txt", "Rakefile"].to_a
-  s.require_path = "lib"
-
-  s.author = "Alexey Borzenkov"
-  s.email = "snaury@gmail.com"
-  s.extra_rdoc_files = ["README.txt", "LICENSE.txt"]
-  s.has_rdoc = true
-end
-
-Rake::GemPackageTask.new(spec) do |pkg|
-  pkg.need_tar = true
+    gemspec.add_dependency('rubysspi', '>= 1.3.1')
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end

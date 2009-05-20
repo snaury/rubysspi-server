@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Alexey Borzenkov"]
-  s.date = %q{2009-05-18}
+  s.date = %q{2009-05-20}
   s.email = %q{snaury@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -16,7 +16,9 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
      "README.txt",
      "Rakefile",
-     "lib/win32/sspi/server.rb"
+     "VERSION.yml",
+     "lib/win32/sspi/server.rb",
+     "rubysspi-server.gemspec"
   ]
   s.has_rdoc = true
   s.rdoc_options = ["--charset=UTF-8"]
